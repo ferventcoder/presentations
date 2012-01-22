@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>sidepop</id>
+    <version>0.0.0.44</version>
+    <authors>Rob Reynolds</authors>
+    <summary>SidePOP gives your app the ability to receive email</summary>
+    <description>SidePOP allows your application the ability to receive email</description>
+    <dependencies>
+      <dependency id="log4net" version="1.2.10" />
+    </dependencies>
+  </metadata>
+</package>

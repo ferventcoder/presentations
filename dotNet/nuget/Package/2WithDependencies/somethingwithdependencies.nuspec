@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>somethingwithdependencies</id>
+    <version>1.0.0.0</version>
+    <authors>Me</authors>
+    <summary>summary</summary>
+    <description>more detail</description> 
+    <!--<projectUrl>__REPLACE__</projectUrl>
+    <licenseUrl>__REPLACE__</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>space delimited</tags>
+    <iconUrl>32x32.png</iconUrl>
+    -->
+    <dependencies>
+      <dependency id="something" version="1.0.0.0" />
+    </dependencies>
+  </metadata>
+</package>

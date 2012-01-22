@@ -1,0 +1,74 @@
+--- !ruby/object:Gem::Specification 
+name: roundhouse
+version: !ruby/object:Gem::Version 
+  hash: 40202235
+  prerelease: false
+  segments: 
+  - 0
+  - 5
+  - 0
+  - 248
+  - 20100730
+  version: 0.5.0.248.20100730
+platform: ruby
+authors: 
+- Rob "FerventCoder" Reynolds
+- Pascal Mestdach
+- Jochen Jonckheere
+- Dru Sellers
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2010-07-30 00:00:00 -05:00
+default_executable: 
+dependencies: []
+
+description: RoundhousE is a Professional Database Change and Versioning Management tool
+email: chucknorrisframework@googlegroups.com
+executables: 
+- rh
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- lib/rh.exe
+- bin/rh
+- bin/rh.exe
+has_rdoc: true
+homepage: http://projectroundhouse.org
+licenses: []
+
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+requirements: []
+
+rubyforge_project: roundhouse
+rubygems_version: 1.3.7
+signing_key: 
+specification_version: 3
+summary: RoundhousE - Professional Database Change and Versioning Management
+test_files: []
+

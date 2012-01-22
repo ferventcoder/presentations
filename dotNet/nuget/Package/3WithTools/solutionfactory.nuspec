@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>solutionfactory</id>
+    <version>1.0.3</version>
+    <authors>Eric Hexter</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Solution Factory is a Visual Studio library that reduces the friction of automating multi-project template</description>
+    <summary>Solution Factory is a Visual Studio library that reduces the friction of automating multi-project template</summary>
+    <language>en-US</language>
+  </metadata>
+</package>

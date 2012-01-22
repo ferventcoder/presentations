@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nugetexamples", "nugetexamples\nugetexamples.csproj", "{B2C10DFF-3633-4010-B7DF-3B3EBFA49DE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nugetexamples.mvc", "nugetexamples.mvc\nugetexamples.mvc.csproj", "{E604D503-85BB-47AB-9E6E-39DA5F9A541B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2C10DFF-3633-4010-B7DF-3B3EBFA49DE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2C10DFF-3633-4010-B7DF-3B3EBFA49DE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2C10DFF-3633-4010-B7DF-3B3EBFA49DE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2C10DFF-3633-4010-B7DF-3B3EBFA49DE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E604D503-85BB-47AB-9E6E-39DA5F9A541B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E604D503-85BB-47AB-9E6E-39DA5F9A541B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E604D503-85BB-47AB-9E6E-39DA5F9A541B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E604D503-85BB-47AB-9E6E-39DA5F9A541B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
