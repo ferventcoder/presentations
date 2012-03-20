@@ -42,10 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\SolutionVersion.cs">
+      <Link>Properties\SolutionVersion.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="DropkickExample\up\" />
+    <Content Include="DropkickExample\up\0000_1Membership_InstallCommon.sql" />
+    <Content Include="DropkickExample\up\0000_2Membership_InstallMembership.sql" />
+    <Content Include="DropkickExample\up\0000_3Membership_InstallProfile.SQL" />
+    <Content Include="DropkickExample\up\0000_4Membership_InstallRoles.sql" />
+    <Content Include="DropkickExample\up\0000_5Membership_InstallPersonalization.sql" />
+    <Content Include="DropkickExample\up\0000_6Membership_InstallWebEventSqlProvider.sql" />
+    <Content Include="DropkickExample\up\201203201647476_InitialStructure.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />

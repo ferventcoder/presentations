@@ -4,6 +4,8 @@
 namespace WebApp.App_Start
 {
     using System.Reflection;
+    using DropkicKExample;
+    using infrastructure.registration;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
     using Ninject;
     using Ninject.Web.Mvc;
@@ -13,40 +15,32 @@ namespace WebApp.App_Start
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
 
         /// <summary>
-        /// Starts the application
+        ///  Initializes Ninject
         /// </summary>
-        public static void Start() 
+        public static void Start()
         {
+            "NinjectMVC3".Log().Debug("Ninject is starting up");
             DynamicModuleUtility.RegisterModule(typeof(OnePerRequestModule));
             DynamicModuleUtility.RegisterModule(typeof(HttpApplicationInitializationModule));
             bootstrapper.Initialize(CreateKernel);
         }
-        
+
         /// <summary>
-        /// Stops the application.
+        ///  Does any shutdown for Ninject
         /// </summary>
         public static void Stop()
         {
             bootstrapper.ShutDown();
+            "NinjectMVC3".Log().Debug("Ninject has shut down");
         }
-        
+
         /// <summary>
-        /// Creates the kernel that will manage your application.
+        ///   Creates the kernel that will manage your application.
         /// </summary>
         /// <returns>The created kernel.</returns>
         private static IKernel CreateKernel()
         {
-            var kernel = new StandardKernel();
-            RegisterServices(kernel);
-            return kernel;
-        }
-
-        /// <summary>
-        /// Load your modules or register your services here!
-        /// </summary>
-        /// <param name="kernel">The kernel.</param>
-        private static void RegisterServices(IKernel kernel)
-        {
-        }        
+            return NinjectContainer.Kernel;
+        }  
     }
 }

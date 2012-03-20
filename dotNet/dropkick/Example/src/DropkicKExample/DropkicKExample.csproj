@@ -33,8 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.4.3.1\lib\net40\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=4.3.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.4.3.0\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
       <Private>True</Private>
@@ -45,8 +46,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +57,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\SolutionVersion.cs">
+      <Link>Properties\SolutionVersion.cs</Link>
+    </Compile>
     <Compile Include="domain\BaseDomainObject.cs" />
     <Compile Include="domain\BaseDomainObjectInt.cs" />
     <Compile Include="domain\BaseDomainObjectLong.cs" />
@@ -63,7 +69,13 @@
     <Compile Include="domain\SampleUser.cs" />
     <Compile Include="EnumerableExtensions.cs" />
     <Compile Include="EnumerationExtensions.cs" />
+    <Compile Include="infrastructure.app\configuration\ConfigurationSettings.cs" />
+    <Compile Include="infrastructure.app\configuration\IConfigurationSettings.cs" />
     <Compile Include="infrastructure.app\persistence\DatabaseContext.cs" />
+    <Compile Include="infrastructure.app\registration\Bootstrap.cs" />
+    <Compile Include="infrastructure.app\registration\ContainerBinding.cs" />
+    <Compile Include="infrastructure\configuration\Config.cs" />
+    <Compile Include="infrastructure\configuration\MailSettingsSmtpFolderConverter.cs" />
     <Compile Include="infrastructure\logging\ApplicationParameters.cs" />
     <Compile Include="infrastructure\logging\ILog.cs" />
     <Compile Include="infrastructure\logging\Log.cs" />
@@ -73,6 +85,10 @@
     <Compile Include="infrastructure\persistence\IDataContext.cs" />
     <Compile Include="infrastructure\persistence\IRepository.cs" />
     <Compile Include="LogExtensions.cs" />
+    <Compile Include="migrations\201203201647476_InitialStructure.cs" />
+    <Compile Include="migrations\201203201647476_InitialStructure.Designer.cs">
+      <DependentUpon>201203201647476_InitialStructure.cs</DependentUpon>
+    </Compile>
     <Compile Include="migrations\DbConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringExtensions.cs" />

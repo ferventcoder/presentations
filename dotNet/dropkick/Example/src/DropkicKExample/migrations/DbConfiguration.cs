@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.Migrations;
-using System.Linq;
-using DropkicKExample.domain;
-using DropkicKExample.infrastructure.app;
-using DropkicKExample.infrastructure.app.persistence;
-
-namespace DropkicKExample.migrations
+﻿namespace DropkicKExample.migrations
 {
+    using System.Data.Entity.Migrations;
+    using infrastructure.app.persistence;
+
     /// <summary>
     /// This is the database configuration for migrations
     /// </summary>
@@ -24,10 +18,6 @@ namespace DropkicKExample.migrations
             SeedDatabase(context);
         }
 
-        public static void SeedDatabase(DatabaseContext context)
-        {
-           
-        }
-
+        public static void SeedDatabase(DatabaseContext context) {}
     }
 }
