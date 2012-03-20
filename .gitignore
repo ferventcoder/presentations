@@ -15,6 +15,7 @@ _ReSharper*
 *.resharper
 *.cache
 *~
+~*
 *.swp
 *.orig
 *.log
