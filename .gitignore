@@ -5,6 +5,7 @@ bin
 obj
 _ReSharper*
 /packages
+/dotNet/dropkick/Example/src/packages
 *.csproj.user
 *.[r|R]esharper.user
 *.suo
@@ -19,7 +20,6 @@ _ReSharper*
 *.log
 *.results.xml
 /packages
-_AzurePackage
 *.sln.docstates
 *.nupkg
 *.bak
