@@ -28,8 +28,10 @@
   <property name="file.build_log" value="${dirs.build}${path.separator}build.log" />
   <property name="is.replaced" value="false" />
   <property name="fail.build.on.error" value="true" />
+  <property name="file.uppercut.assembly" value="uppercut.tasks.dll" />
+  <property name="path.uppercut.assembly" value="${dirs.current.file}${path.separator}${file.uppercut.assembly}" />
 
-  <target name="go" depends="run_tasks" />
+  <target name="go" depends="load_uppercut_assemblies,run_tasks" />
 
   <target name="run_tasks">
     <echo level="Warning" message="" />
@@ -52,6 +54,10 @@
     <mkdir dir="${dirs.drop}" />
   </target>
 
+  <target name="load_uppercut_assemblies">
+    <loadtasks assembly="${path.uppercut.assembly}" if="${file::exists(path.uppercut.assembly)}" />
+  </target>
+  
   <target name="build_artifacts">
     <echo level="Warning" message="Packaging build artifacts (such as test results) to ${dirs.drop}${path.separator}${folder.build_artifacts}."/>
     <copy todir="${dirs.drop}${path.separator}${folder.build_artifacts}">

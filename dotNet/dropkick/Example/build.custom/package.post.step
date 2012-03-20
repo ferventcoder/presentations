@@ -24,15 +24,41 @@
   <property name="dirs.environment_files" value="${dirs.current}${path.separator}${folder.environment_files}" overwrite="false" />
   <property name="folder.deployment" value="deployment" overwrite="false" />
   <property name="dirs.deployment" value="${dirs.current}${path.separator}${folder.deployment}" overwrite="false" />
+  <property name="dirs.deployment.drop" value="${dirs.current}${path.separator}${folder.code_drop}${path.separator}${folder.deployment}" overwrite="false" />
   <property name="folder.settings" value="settings" overwrite="false" />
   <property name="dirs.settings" value="${dirs.current}${path.separator}${folder.settings}" overwrite="false" />
   <property name="folder.documentation" value="docs" overwrite="false" />
   <property name="dirs.docs" value="${dirs.current}${path.separator}${folder.documentation}" overwrite="false" />
   <property name="folder.references" value="lib" overwrite="false" />
   <property name="dirs.lib" value="${dirs.current}${path.separator}${folder.references}" overwrite="false" />
+  <property name="dirs.dk" value="${dirs.current}${path.separator}src${path.separator}packages${path.separator}dropkick.core.0.4.13.0${path.separator}tools" overwrite="false" />
+  
+  <target name="go" depends="copy_dk,remove_app_drop_folder" />
 
-  <target name="go" depends="remove_app_drop_folder" />
+  <target name="copy_dk">
+    <echo level="Warning" message="Copying DropkicK folder items to ${dirs.deployment.drop}\dk." />
+    <copy todir="${dirs.deployment.drop}">
+      <fileset basedir="${dirs.dk}">
+        <include name="dropkick/**" />
+      </fileset>
+    </copy>
 
+    <echo level="Warning" message="Copying the deployment dll to the ${dirs.deployment}\dk" />
+    <copy file="${dirs.build}\${folder.app.drop}\Deployment.dll" todir="${dirs.deployment.drop}\DeploymentSpecification" />
+    <copy file="${dirs.build}\${folder.app.drop}\Deployment.pdb" todir="${dirs.deployment.drop}\DeploymentSpecification" />
+
+    <echo level="Warning" message="Copying the deployment settings to ${dirs.deployment.drop}\settings" />
+    <copy todir="${dirs.deployment.drop}\settings" flatten="true">
+      <fileset basedir="${dirs.drop}\${folder.environment_files}">
+          <include name="**\*.servermaps" />
+          <include name="**\*.js" />
+      </fileset>
+      <filterchain>
+        <replacestring from="\" to="\\" />
+    </filterchain>
+    </copy>
+  </target>
+  
   <target name="remove_app_drop_folder">
     <echo level="Warning" message="Removing '${dirs.drop}\${folder.app.drop}'." />
     <delete>
@@ -42,5 +68,7 @@
     </delete>
     <delete dir="${dirs.drop}\${folder.app.drop}" failonerror="false" />
   </target> 
+  
+
 
 </project>

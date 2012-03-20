@@ -3,7 +3,7 @@
   <!-- environment settings -->
   <property name="environment" value="LOCAL" />
   <!-- servers -->
-  <property name="server.app" value="127.0.0.1" />
+  <property name="server.services" value="127.0.0.1" />
   <property name="server.database" value="(local)" />
   <property name="server.smtp" value="localhost" />
   <property name="server.smtp.deliveryMethod" value="SpecifiedPickupDirectory" />
@@ -28,10 +28,23 @@
   <property name="connection.string" value="Server=${server.database};Database=${database.name};Integrated Security=True;" overwrite="false" />
   <property name="restore.from.path" value="${dirs.db}\${database.name}.bak" overwrite="false" />
   <property name="restore.custom.options" value="" overwrite="false" />
+  <property name="db.recovery.mode" value="Simple" overwrite="false" />
+  <property name="roundhouse.mode" value="DropCreate" overwrite="false" />
   
   <!-- app info -->
+  <property name="deploy.service.name" value="dropkickexample" />
+  <property name="deploy.service.path" value="~\service\${deploy.service.name}" />
+  <property name="service.host.startmode" value="Automatic" />
+  <property name="service.host.username" value="BUILTIN\SYSTEM" />
+  <property name="service.host.userpassword" value="" />
+  
   <property name="deploy.web.name" value="dropkickexample" />
-  <property name="deploy.web.path" value="web\${deploy.app.name}" />
+  <property name="deploy.web.path" value="~\web\${deploy.web.name}" />
   <property name="deploy.web.from" value="..\_PublishedWebSites\WebApp" />
+   <property name="service.web.username" value="BUILTIN\SYSTEM" />
+  <property name="service.web.userpassword" value="" />
+  
+  <property name="service.web.virtualdirectory.site" value="Default Web Site" />
+  <property name="service.web.virtualdirectory.name" value="DropkicKExample" />
   
 </project>
