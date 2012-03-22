@@ -1,0 +1,33 @@
+<html><body style="font: 14px Segoe UI"><h1>DropkicK Hands on Lab</h1>
+
+<p>DropkicK is part of the ChuckNorris Framework, a suite of tools that are really meant to help developers be more productive by automating development tasks. Each of the tools can be used independently, but as you will see from the lab, the pieces fit really well together when the applications work together.  </p>
+
+<ol>
+<li>Create two shares (web &amp; service) on your local machine.  </li>
+<li>Give read/write permissions to the share for everyone so the share permissions are handled by the ACLs.  </li>
+<li>Run build.bat - it should run successfully.  </li>
+<li>Open the solution, add a new class library project called Deployment.   </li>
+<li>In the Deployment project, use nuget to install <a href="http://nuget.org/packages/dropkick.settings.templates">dropkick.settings.templates</a>.   </li>
+<li>Update the _REPLACE_ text in TheDeployment.cs. The name of the website folder is _PublishedWebsites\WebApp.  </li>
+<li>Right click on the .template files and under the properties for Visual Studio set  [Copy to Output Directory] to <strong>Copy always</strong>. </li>
+<li>Run build.bat.  </li>
+<li>Go to the code_drop\deployment folder. Run the LOCAL.All.Deploy.bat file.  </li>
+<li>Watch the output. If everything works, you won't have any red text. Otherwise you will need to work with it.  </li>
+<li>There is another branch named dropkick_completed that has the completed code from the presentation you can build and run if you get stuck.  </li>
+<li>Also have a look at the <a href="https://github.com/chucknorris/dropkick/wiki">wiki</a> to start seeing what you can do.</li>
+<li>Feel free to look around, there are a few technologies used in the example.
+<ul>
+<li><a href="https://github.com/chucknorris/dropkick/wiki">DropkicK</a> - tool of the hour, fluent deployment tool  </li>
+<li><a href="https://github.com/chucknorris/uppercut">UppercuT</a> - conventional build tool  </li>
+<li><a href="https://github.com/chucknorris/roundhouse/wiki">RoundhousE</a> - database migrations tool  </li>
+<li>RoundhousE.RefreshDatabase.EF - early preview of the tool that takes your Entity Framework Code Migrations and preps them as .sql files for use by the roundhouse migrations engine.  </li>
+<li>Entity Framework w/Migrations - code migrations  </li>
+<li>Entity Framework Code First Entity setup - take a look at a good way of setting up your domain entities  </li>
+<li><a href="http://nuget.org">NuGet</a> - .NET library package manager  </li>
+<li>NuGet Package Restore - checking in packages not necessary, everything is downloaded when you build the project, even in Visual Studio.  </li>
+<li>Ninject - shows container registration with multiple registration points</li>
+<li>WebActivator - shows how to register a module (ninject as a http module)</li>
+<li>log4net </li>
+</ul></li>
+</ol>
+</body></html>
