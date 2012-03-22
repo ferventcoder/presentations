@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefreshDatabase", "RefreshD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db", "db", "{A5560025-91B2-4F4A-BE18-35A2E09D6846}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deployment", "Deployment\Deployment.csproj", "{8671EACF-7065-41E1-8FA2-ACDAC3557107}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,16 @@ Global
 		{E8193CD2-FC61-4A2A-8B4F-5561EA271778}.Release|Mixed Platforms.Build.0 = Release|x86
 		{E8193CD2-FC61-4A2A-8B4F-5561EA271778}.Release|x86.ActiveCfg = Release|x86
 		{E8193CD2-FC61-4A2A-8B4F-5561EA271778}.Release|x86.Build.0 = Release|x86
+		{8671EACF-7065-41E1-8FA2-ACDAC3557107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8671EACF-7065-41E1-8FA2-ACDAC3557107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8671EACF-7065-41E1-8FA2-ACDAC3557107}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8671EACF-7065-41E1-8FA2-ACDAC3557107}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8671EACF-7065-41E1-8FA2-ACDAC3557107}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8671EACF-7065-41E1-8FA2-ACDAC3557107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8671EACF-7065-41E1-8FA2-ACDAC3557107}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8671EACF-7065-41E1-8FA2-ACDAC3557107}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8671EACF-7065-41E1-8FA2-ACDAC3557107}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8671EACF-7065-41E1-8FA2-ACDAC3557107}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
