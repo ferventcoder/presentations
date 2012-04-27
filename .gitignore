@@ -6,6 +6,7 @@ obj
 _ReSharper*
 /packages
 /dotNet/dropkick/Example/src/packages
+/dotNet/powershellbdd/Example/Calculator/packages
 *.csproj.user
 *.[r|R]esharper.user
 *.suo

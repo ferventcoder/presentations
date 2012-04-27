@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6d7c5037-e422-4229-958c-bae3012c6a5c}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MyApplication</RootNamespace>
+    <AssemblyName>MyApplication</AssemblyName>
+    <Name>Calculator.Core.Powershell</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Better" />
+    <Folder Include="Better\src" />
+    <Folder Include="Better\src\functions" />
+    <Folder Include="Better\tests" />
+    <Folder Include="Better\tests\mocks" />
+    <Folder Include="Better\tests\unit" />
+    <Folder Include="_Normal" />
+    <Folder Include="_Normal\tests" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Example.ps1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Better\src\functions\Calculator-Add.ps1">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="_Normal\Calculator.ps1">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="_Normal\tests\Calculator.tests.ps1">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Better\src\functions\Add-Numbers.ps1">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Better\src\Calculator.ps1">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Better\tests\_Common.ps1">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Better\tests\_FunctionRenameActuals.ps1">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Better\tests\_Initialize-Variables.ps1">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Better\tests\_Setup.ps1">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Better\tests\mocks\Add-Numbers.ps1">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Better\tests\mocks\Calculator-Add.ps1">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Better\tests\unit\Calculator-Add.tests.ps1">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Target Name="Build" />
+</Project>
