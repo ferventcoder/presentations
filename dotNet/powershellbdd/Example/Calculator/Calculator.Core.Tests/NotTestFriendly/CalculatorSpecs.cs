@@ -26,7 +26,7 @@
             }
 
             [Fact]
-            public void should_subtract_three_and_two_to_equal_two()
+            public void should_subtract_three_and_two_to_equal_one()
             {
                  _calulator.Subtract(3, 2).ShouldEqual(1);
             }

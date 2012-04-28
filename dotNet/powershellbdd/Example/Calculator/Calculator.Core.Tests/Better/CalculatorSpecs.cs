@@ -64,20 +64,19 @@
         {
             private int left = 1;
             private int right = 2;
-            private const int expectedResult = 3;
             private int result = 0;
 
             public override void Context()
             {
                 base.Context();
-                _operation.Setup(x => x.OperationType).Returns(OperationType.Subtraction);
-                _operation.Setup(x => x.PerformOperation(It.IsAny<int>(), It.IsAny<int>())).Returns(3);
+                _operation.Setup(x => x.OperationType).Returns(OperationType.Addition);
+                //_operation.Setup(x => x.PerformOperation(It.IsAny<int>(), It.IsAny<int>())).Returns(3);
                 //adf
             }
 
             public override void Because()
             {
-                result = _calulator.PerformOperation(OperationType.Addition, left, right);
+                result = _calulator.PerformOperation(OperationType.Subtraction, left, right);
             }
 
             [Fact]
@@ -93,7 +92,7 @@
             }
 
             [Fact]
-            public void should_perform_an_operation_call_on_the_operation_type()
+            public void should_not_perform_an_operation_call_on_the_operation_type()
             {
                 _operation.Verify(x => x.PerformOperation(left, right),Times.Never());
             }
