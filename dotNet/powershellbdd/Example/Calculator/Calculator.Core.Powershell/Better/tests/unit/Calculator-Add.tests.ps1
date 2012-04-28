@@ -7,7 +7,7 @@ $common = Join-Path (Split-Path -Parent $here)  '_Common.ps1'
 Describe "When calling Calculator-Add to add numbers" {
   Initialize-Variables
   $script:calculator_add_exec_actual = $true
-  $script:add_numbers_return_value = 3
+  $script:add_numbers_return_value = 6
   $left = 1
   $right = 2
   $return = Calculator-Add  $left $right

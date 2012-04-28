@@ -19,13 +19,13 @@
         {
             public override void Because(){}
 
-            [Observation]
+            [Fact]
             public void should_add_one_and_two_to_equal_three()
             {
                 _calulator.Add(1, 2).ShouldEqual(3);
             }
 
-            [Observation]
+            [Fact]
             public void should_subtract_three_and_two_to_equal_two()
             {
                  _calulator.Subtract(3, 2).ShouldEqual(1);
