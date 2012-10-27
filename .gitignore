@@ -19,6 +19,8 @@ _ReSharper*
 ~*
 *.swp
 *.orig
+.DS_Store
+Thumbs.db
 *.log
 *.results.xml
 /packages
